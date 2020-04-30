@@ -6,6 +6,10 @@ import Contacto from '../views/Contacto.vue'
 import Usuarios from '../views/Usuarios.vue'
 import Login from '../views/Login.vue'
 import Singup from '../views/Singup.vue'
+import Productos from '../views/productos/Index.vue'
+import Detalle from '../views/productos/Detalle.vue'
+// es sensible al direccionamiento y al nombre de los archivos asi sea mayuscula o minuscula, debe ser exactamente igual
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -38,6 +42,23 @@ Vue.use(VueRouter)
     path: '/singup',
     name: 'singup',
     component: Singup
+  },
+  {
+    path: '/registrarse',
+    redirect: 'singup'   
+  },
+  {
+    path: '/productos',
+    name: 'productos',
+    component: Productos
+
+  }, 
+  {
+    // parad darle parametros de envio a otra vista
+    path: '/producto-detalle/:id',
+    name: 'producto',
+    component: Detalle
+
   }
 
 ]

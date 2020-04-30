@@ -3,7 +3,8 @@
     <div class="container">
          <div class="wrapper">
          <form class="form-signin">       
-            <h2 class="form-signin-heading">Ingrese sus Datos</h2>
+            <h2 class="form-signin-heading">Ingrese sus Datos</h2> 
+            <button class="btn btn-info btn-block" @click="singup()">Registrarse</button><br/> 
             <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
             <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
             <label class="checkbox">
@@ -17,7 +18,13 @@
 </template>
 
 <script>
-
+    export default{
+        methods:{
+            singup(){
+                this.$router.push('/singup');
+            }
+        }
+    }
 </script>
 
 <style>
